@@ -4,7 +4,7 @@
 
 * What is version control?  Why is it useful?
   Version control allows us to view the entire history of revisions to one or more files, and merge revisions make by different people.
-  It is useful because if someone commit code that causes the program to break, it can be reverted back to a previous build that works or have a backup copy. Also people can edit the same file at the same time. Also useful because track changes allows you to pinpoint who made each change so you can discuss it with them, or ask questions.
+  It is useful because if someone commit code that causes the program to break, it can be reverted back to a previous build that works. Also people can edit the same file at the same time. Also useful because track changes allows you to pinpoint who made each change so you can discuss it with them, or ask questions.
 
 * What is a branch and why would you use one?
   A branch in Git means you diverge from the main line of development and continue to do work without messing with that main line or a lightweight movable pointer to one of these commits.
