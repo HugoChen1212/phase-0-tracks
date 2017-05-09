@@ -1,0 +1,16 @@
+Release 0: Elevator
+- For each floor in a list of the elevator
+  - Until someone push the number of the floor
+    - elevator will close the door
+    -then moving up or down to the chosen floor
+  - If no floor has chosen:
+    - stay in the last chosen floor
+
+Release 1: Micro-wave
+- Wait until it's time has been chosen
+- while the time has been chosen and greater than 0
+  - Start counting up the time from 0 and Micor-wave start working
+    - If the chosen time is not equal to the counting time
+      - Micor-wave will continue counting and working
+    - until counting up time equal to the chosen time
+      - Micro-wave will stop counting and working
