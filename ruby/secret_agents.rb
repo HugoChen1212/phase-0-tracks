@@ -1,6 +1,6 @@
 def encrypt (letter)
   arr=[]
- idx=0
+  idx=0
  while idx < letter.length
   if letter[idx]=="z"
      letter[idx]="a"
@@ -9,12 +9,12 @@ def encrypt (letter)
      letter[idx]=" "
      arr<<letter[idx]
    else
-  sollo=letter[idx].next
-  arr<<sollo
-end
-  idx+=1
-end
-return arr.join("")
+     forward=letter[idx].next
+     arr<<forward
+    end
+    idx+=1
+  end
+  return arr.join("")
 end
 
 
@@ -30,35 +30,31 @@ def decrypt (letter)
      letter[idx]=" "
      arr<<letter[idx]
    else
-  letter_p=letter[idx]
-  number=alphabet.index(letter_p)
-  backward_num=number-1
-  backward_l=alphabet[backward_num]
+     letter_previous=letter[idx]
+     number=alphabet.index(letter_previous)
+     backward_num=number-1
+     backward_letter=alphabet[backward_num]
+     arr<<backward_letter
+     end
+     idx+=1
+  end
+  return arr.join("")
+end
 
-arr<<backward_l
-end
-idx+=1
-end
-return arr.join("")
-end
-
-#puts encrypt("abc")
-#puts encrypt("zed")
-#puts decrypt("bcd")
-#puts decrypt("afe")
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
 
 decrypt(encrypt("swordfish"))
-# First thing is happen is inside the parenthesis of the encrypt method. The output of the encrypt method become the argument.
+# First thing is happen is inside the parenthesis of the encrypt method. The output of the encrypt method become the argument to decrypt.
 
 puts "Do you want to encrypt or decrypt a password?"
   crypt=gets.chomp
-
-
-
   if crypt == "encrypt"
     puts "Please type password here:"
     password=gets.chomp
-     output=encrypt(password)
+    output=encrypt(password)
     puts "Your encryption is #{output}. "
   elsif crypt == "decrypt"
     puts "Please type password here:"
