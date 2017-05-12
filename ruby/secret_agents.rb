@@ -1,3 +1,21 @@
+=begin
+Encrypt:
+- Wait until some letters is typing in.
+ - will need to find the letter and repeat this process
+  - if the letter is "z", we want to reassign the variable to be "a"
+  - else if the letter is empty, we want to resassign the variable to be empty
+  - else other letters we will set each letter that will find that move forward one step.
+- after all the letters moving forward, it will stop and return the output of the moving forward letters.
+
+Decrypt:
+- Wait until some letters is typing in.
+ - will need to find the letter and repeat this process
+  - if the letter is "z", we want to reassign the variable to be "a"
+  - else if the letter is empty, we want to resassign the variable to be empty
+  else other letters we will set each letter that will find  that move backward one step.
+- after all the letters moving backward, it will stop and return the output of the moving backward letters.
+=end
+
 def encrypt (letter)
   arr=[]
   idx=0
