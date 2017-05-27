@@ -70,7 +70,7 @@ santas.each do |santa|
   puts santa.ethnicity end
 santas.each do |santa|
   puts santa.ethnicity=("black") end
-
+=end
   agender_arr = []
 santas.each do |santa|
   agender_arr << santa.gender end
@@ -83,7 +83,7 @@ p ethnicity_arr
 
 
 new_santas = []
-10.times do |i|
+1000.times do |i|
   new_santas << Santa.new(agender_arr.sample(1),ethnicity_arr.sample(1)) end
 
 new_santas.each do |santa|
@@ -91,7 +91,7 @@ puts santa.ethnicity end
 
 new_santas.each do |santa|
 puts santa.gender end
-=end
+
 
 santas.each do |santa|
   puts santa.print_santa end
