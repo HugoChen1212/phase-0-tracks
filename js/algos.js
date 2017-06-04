@@ -27,6 +27,30 @@ list = ["long phrase","longest phrase","longer phrase"];
 
 console.log(Logest_Phrase(list));
 
+// Function to find a key-value match
+// input: Hash and other Hash
+// steps:
+  // iterate through both Hash
+  // compare to both each key-value
+  // IF at least one key-value pair matches between the two Hash
+  // return true
+  // IF no key-value pair matches between the two
+  // return false
+// output: Boolean
 
+function Key_Value_Match (object1, object2) {
+for (var k in object1){
+  for (var i in object2){
+   if ( object1[k] == object2[i]){
+     return true;
+   }
+}
+}
+return false;
+}
+
+console.log(Key_Value_Match({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+console.log(Key_Value_Match({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
+console.log(Key_Value_Match({animal: "Dogs", legs: 4}, {animal: "Dog", legs: 3}));
 
 
