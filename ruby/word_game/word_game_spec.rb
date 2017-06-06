@@ -1,31 +1,40 @@
 require_relative 'word_game'
 
 describe Word_game do
-  let(:word_game) {Word_game.new}
+  let(:word_game) {Word_game.new("hugo")}
 
-  describe "play_game" do
+  describe "initialize" do
+ it "initialize the word" do
+    expect(word_game.word). to eq ("hugo")
+ end
+ it "initialize the guess_count" do
+    expect(word_game.guess_count). to eq (0)
+ end
 
- it "ask user for word" do
-    expect(word_game.play_game("hi")).to eq("Please enter you word here.")
-  end
-    it "Ask player to guess letter" do
-    expect(word_game.play_game("hi")).to eq("Please guess your letter here.")
-  end
-
-  it "should convert the word to array" do
-    expect(word_game.play_game("hi")).to eq(["h","i"])
-  end
-
-  it "print the correct letter" do
-    expect(word_game.play_game("hi")).to eq("_i")
-  end
-
-  it "Please try again" do
-    expect(word_game.play_game("hi")).to eq("Please try again!")
+ it "initialize the array" do
+    expect(word_game.correct_letter). to eq (["_","_","_","_"])
+ end
+end
+describe "play_game" do
+ it "return the letter if guess right" do
+    expect(word_game.play_game("h")).to eq("h___")
   end
 
-  it "print out all the correct letter " do
-    expect(word_game.play_game("hi")).to eq("hi")
+  it "return the letter if guess right" do
+    expect(word_game.play_game("u")).to eq("_u__")
   end
+
+  it "return the letter if guess right" do
+    expect(word_game.play_game("g")).to eq("__g_")
+  end
+
+  it "return the letter if guess right" do
+    expect(word_game.play_game("o")).to eq("___o")
+  end
+
+   it "if the letter guess wrong" do
+    expect(word_game.play_game("i")).to eq("____")
+  end
+
 end
 end
