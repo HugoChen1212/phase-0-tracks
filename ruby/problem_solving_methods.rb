@@ -39,10 +39,10 @@ Pseudocode:
 
 -Then, we use conditional "if" to compare and confirm if the index is greater than index2, if yes, then we swap their places and return an array.
 =end
-def sorting (arr)
+def bubble_sort (arr)
     idx =0
  while idx < arr.length
-    idx2= idx +1
+    idx2= idx + 1
    while idx2 < arr.length
      if arr[idx] > arr[idx2]
         arr[idx], arr[idx2] = arr[idx2], arr[idx]
@@ -55,7 +55,7 @@ def sorting (arr)
 end
 
 arr=[1,4,2,9,6,3,7,5,1,0]
-p sorting (arr)
+p bubble_sort (arr)
 
 
 #We chhose a Bubble sort algorithm to learn about.
