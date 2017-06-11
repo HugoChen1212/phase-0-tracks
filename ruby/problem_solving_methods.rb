@@ -39,10 +39,10 @@ Pseudocode:
 
 -Then, we use conditional "if" to compare and confirm if the index is greater than index2, if yes, then we swap their places and return an array.
 =end
-def sorting (arr)
+def bubble_sort (arr)
     idx =0
  while idx < arr.length
-    idx2= idx +1
+    idx2= idx + 1
    while idx2 < arr.length
      if arr[idx] > arr[idx2]
         arr[idx], arr[idx2] = arr[idx2], arr[idx]
@@ -55,10 +55,11 @@ def sorting (arr)
 end
 
 arr=[1,4,2,9,6,3,7,5,1,0]
-p sorting (arr)
+p bubble_sort (arr)
 
-=begin
-We chhose a Bubble sort algorithm to learn about.
-For the bubble sort, compares each pair of adjacent items and swaps them if they are in the wrong order. I use Google help me to grasp this information. Find more than ten resources to compare it and keep testing on that theory.
-I don't feel overwhelmed in this challenge, and it doesn't affect my ability of learning.
-=end
+
+#We chhose a Bubble sort algorithm to learn about.
+#For the bubble sort, compares each pair of adjacent items and swaps them if they are in the wrong order.
+#I use Google help me to grasp this information.
+#Find more than ten resources to compare it and keep testing on that theory.
+#I don't feel overwhelmed in this challenge, and it doesn't affect my ability of learning.
