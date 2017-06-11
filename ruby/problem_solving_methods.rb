@@ -57,8 +57,9 @@ end
 arr=[1,4,2,9,6,3,7,5,1,0]
 p sorting (arr)
 
-=begin
-We chhose a Bubble sort algorithm to learn about.
-For the bubble sort, compares each pair of adjacent items and swaps them if they are in the wrong order. I use Google help me to grasp this information. Find more than ten resources to compare it and keep testing on that theory.
-I don't feel overwhelmed in this challenge, and it doesn't affect my ability of learning.
-=end
+
+#We chhose a Bubble sort algorithm to learn about.
+#For the bubble sort, compares each pair of adjacent items and swaps them if they are in the wrong order.
+#I use Google help me to grasp this information.
+#Find more than ten resources to compare it and keep testing on that theory.
+#I don't feel overwhelmed in this challenge, and it doesn't affect my ability of learning.
