@@ -17,6 +17,10 @@ class Puppy
     years * 7
   end
 
+  def play_dead
+    puts "plays dead"
+  end
+
  end
 
   dog = Puppy.new
@@ -24,3 +28,4 @@ class Puppy
   dog.speak(3)
   dog.roll_over
   p dog.dog_years(4)
+  dog.play_dead
