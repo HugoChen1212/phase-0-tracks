@@ -1,5 +1,9 @@
 class Puppy
 
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -23,9 +27,29 @@ class Puppy
 
  end
 
+=begin
   dog = Puppy.new
   dog.fetch("ball")
   dog.speak(3)
   dog.roll_over
   p dog.dog_years(4)
   dog.play_dead
+=end
+
+class Air_plane
+  def initialize
+    puts "Initializing new air plane instance."
+  end
+
+  def take_off
+    puts "take off!"
+  end
+
+  def land
+    puts "land it."
+  end
+
+end
+
+ boey = Air_plane.new
+ p boey
