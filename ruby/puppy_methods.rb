@@ -1,4 +1,5 @@
 class Puppy
+
   def initialize
     puts "Initializing new puppy instance..."
   end
@@ -8,50 +9,59 @@ class Puppy
     toy
   end
 
-  def speak (num)
+  def speak(num)
     puts "Woof!" * num
   end
 
   def roll_over
     puts "*rolls over*"
   end
-  def dog_years (num)
-    num * 7
+
+  def dog_years(years)
+    years * 7
   end
-  def walk
-    puts "Dog go for walk."
+
+  def play_dead
+    puts "plays dead"
+  end
+
+ end
+
+=begin
+  dog = Puppy.new
+  dog.fetch("ball")
+  dog.speak(3)
+  dog.roll_over
+  p dog.dog_years(4)
+  dog.play_dead
+=end
+
+class Air_plane
+  def initialize
+    puts "Initializing new air plane instance."
+  end
+
+  def take_off
+    puts "take off!"
+  end
+
+  def land
+    puts "land it."
   end
 
 end
-=begin
-dog = Puppy.new
-p dog.fetch("ball")
-p dog.speak(5)
-p dog.roll_over
-p dog.dog_years(2.4)
-p dog.walk
-=end
 
-class Baseball
-  def initialize
-    puts "Hello Baseball!"
-  end
+ boey = Air_plane.new
+ # p boey
 
-  def hit (number)
-    puts "You hit the ball #{number}."
-  end
+ air_planes = []
 
-  def pitch
-    puts "You threw the ball."
-  end
-  end
-
-  baseball_arr =[]
-  50.times do  better=Baseball.new
-    baseball_arr << better
-   end
- baseball_arr.each do |peple|
-   peple.hit(10)
-   peple.pitch
+ 50.times do
+  new_plane = Air_plane.new
+  air_planes << new_plane
  end
 
+ air_planes.each do |planes|
+  planes.take_off
+  planes.land
+  end
