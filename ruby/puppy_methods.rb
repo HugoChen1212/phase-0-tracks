@@ -13,9 +13,14 @@ class Puppy
     puts "*rolls over*"
   end
 
+  def dog_years(years)
+    years * 7
+  end
+
  end
 
   dog = Puppy.new
   dog.fetch("ball")
   dog.speak(3)
   dog.roll_over
+  p dog.dog_years(4)
