@@ -52,4 +52,11 @@ class Air_plane
 end
 
  boey = Air_plane.new
- p boey
+ # p boey
+
+ air_planes = []
+
+ 50.times do
+  new_plane = Air_plane.new
+  air_planes << new_plane
+ end
