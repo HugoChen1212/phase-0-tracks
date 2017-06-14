@@ -60,3 +60,8 @@ end
   new_plane = Air_plane.new
   air_planes << new_plane
  end
+
+ air_planes.each do |planes|
+  planes.take_off
+  planes.land
+  end
