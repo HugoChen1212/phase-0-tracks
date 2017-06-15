@@ -7,7 +7,6 @@ module Shout
     puts "I am so happy!"
   end
 end
-
 p Shout.yell_angrily("Hugo")
 p Shout.yelling_happily
 =end
