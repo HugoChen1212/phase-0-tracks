@@ -74,3 +74,11 @@ def update_quantity(food_list, item_name, quantity)
   return food_list
 end
 
+# RELEASE 2 - DRIVER CODE
+=begin
+ food_list = create_list("Pizza Bread Milk Butter")
+ add_item(food_list, "Lemonade", 2)
+ add_item(food_list, "Tomatoes", 3)
+ add_item(food_list, "Onions", 1)
+ p food_list
+ =end
