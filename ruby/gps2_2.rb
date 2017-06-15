@@ -45,7 +45,7 @@ def print_list(food_list)
   end
 end
 
-def create_list (string_food)
+def create_list(string_food)
   food_item = string_food.split(" ")
   food_list = Hash.new(0)
   food_item.each do |item|
@@ -75,10 +75,30 @@ def update_quantity(food_list, item_name, quantity)
 end
 
 # RELEASE 2 - DRIVER CODE
-=begin
+
  food_list = create_list("Pizza Bread Milk Butter")
  add_item(food_list, "Lemonade", 2)
  add_item(food_list, "Tomatoes", 3)
  add_item(food_list, "Onions", 1)
  p food_list
- =end
+
+=begin
+What did you learn about pseudocode from working on this challenge?
+ Before I don't think psedudocode is necessity, but after this challenge I feel psedudocode is helpful.
+ It break down the broblem into a simple steps without writing actual code.
+
+ What are the tradeoffs of using arrays and hashes for this challenge?
+ I choose Hash on this challege for my food_list because it hash key and value make the food_list more organize than using array.
+
+What does a method return?
+ The method will be return the food_list or hash.
+
+What kind of things can you pass into methods as arguments?
+  I pass method, string, and Integer into the arguments for this challenge.
+
+How can you pass information between methods?
+  We can pass the information between methods with the method's parameter or arguments.
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+   Most concepts in this challenge is solidified, only the refactor is confusing and not very good at.
+=end
