@@ -38,3 +38,39 @@
 # output: print a list
 
 
+#RELEASE 1
+def print_list(food_list)
+  food_list.each do |item_name, quantity|
+  puts "You have the following item #{item_name}, qty: #{quantity}."
+  end
+end
+
+def create_list (string_food)
+  food_item = string_food.split(" ")
+  food_list = Hash.new(0)
+  food_item.each do |item|
+  food_list[item] = food_list.default
+  end
+  print_list(food_list)
+  return food_list
+end
+
+def add_item(food_list, item_name, quantity)
+  food_list[item_name] = quantity
+  return food_list
+end
+
+def remove_item(food_list, item_name)
+  food_list.delete(item_name)
+  return food_list
+end
+
+def update_quantity(food_list, item_name, quantity)
+  if food_list.has_key?(item_name)
+  food_list[item_name] = quantity
+  else
+  puts "Sorry we don't have that item on our list."
+  end
+  return food_list
+end
+
