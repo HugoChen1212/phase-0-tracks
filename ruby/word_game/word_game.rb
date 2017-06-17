@@ -61,7 +61,7 @@ class Guess_word
 end
 
 
-
+=begin
 puts "User pleae enter your word here."
   word = gets.chomp
 game = Guess_word.new(word)
@@ -76,3 +76,4 @@ if game.guess_count==word.length
   puts "User enter word is #{game.word}."
   puts "Congratulation! You win the game!"
 end
+=end
