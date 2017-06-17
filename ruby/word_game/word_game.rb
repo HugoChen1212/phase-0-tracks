@@ -8,59 +8,72 @@
 # method to create play_game
   # input: letter
   # steps:
-    # IF letter include in the word
+    # IF letter include in the word and If the letter is not a repeated guessed
+    # counter up one
     # convert the string to list
-    # then iterate through the word
-      # IF split_word's letter == player's letter
-        # set into the list with the correct position and letter
+    # call check_letter method
     # print out the list with the guess right letter and convert to string
     # IF not include the letter
       # it will return a default setting of the array
     # return list and convert to string
   # output: string
 
+  #method to create check_letter
+    #imput: letters and guess_letter
+    #steps:
+    # then iterate through the letters
+    # IF letters contain player's letter
+        # set the player's letter into the list with the correct position
+    # IF letters not contain player's letter
+      # send a message to the user
+    # output: list or message
 
-class Word_game
+
+class Guess_word
     attr_reader :guess_count, :word, :correct_letter
   def initialize (word)
       @word =word
       @guess_count = 0
+      @user_guess = []
       @correct_letter = Array.new(word.length,"_")
   end
 
-  def play_game (letter)
-      if @word.include? (letter)
-         @guess_count+=1
-          arr_word = @word.split("")
-          idx =0
-          while idx < arr_word.length
-             if arr_word[idx] == letter
-                @correct_letter[idx] = letter
-              end
-              idx+=1
-         end
-            p @correct_letter.join("")
+  def play_game(guess_letter)
+      if (@word.include?(guess_letter)) && (!@user_guess.include?(guess_letter))
+        @user_guess << guess_letter
+        @guess_count += 1
+        letters = @word.split("")
+        check_letter(letters, guess_letter)
+        p @correct_letter.join("")
       else
-          puts "Please try again!"
+        p @correct_letter.join
       end
+  end
 
-    return @correct_letter.join ("")
+  def check_letter(letters, guess_letter)
+    letters.each_index do |idx|
+      if letters[idx] == guess_letter
+        @correct_letter[idx] = guess_letter
+      end
+    end
+    return @correct_letter
   end
 end
 
 
+=begin
 puts "User pleae enter your word here."
   word = gets.chomp
-game = Word_game.new(word)
+game = Guess_word.new(word)
 
 word.length.times do
     puts "Other user please guess your letter."
         letter = gets.chomp
         game.play_game(letter)
 end
-
 puts "You won in #{game.guess_count} guesses!"
 if game.guess_count==word.length
   puts "User enter word is #{game.word}."
-  puts "You win the game!"
+  puts "Congratulation! You win the game!"
 end
+=end
