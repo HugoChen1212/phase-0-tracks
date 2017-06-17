@@ -29,31 +29,34 @@
     # output: list or message
 
 
-class Word_game
+class Guess_word
     attr_reader :guess_count, :word, :correct_letter
   def initialize (word)
       @word =word
       @guess_count = 0
+      @user_guess = []
       @correct_letter = Array.new(word.length,"_")
   end
 
-  def play_game (letter)
-      if @word.include? (letter)
-         @guess_count+=1
-          arr_word = @word.split("")
-          idx =0
-          while idx < arr_word.length
-             if arr_word[idx] == letter
-                @correct_letter[idx] = letter
-              end
-              idx+=1
-         end
-            p @correct_letter.join("")
+  def play_game(guess_letter)
+      if (@word.include?(guess_letter)) && (!@user_guess.include?(guess_letter))
+        @user_guess << guess_letter
+        @guess_count += 1
+        letters = @word.split("")
+        check_letter(letters, guess_letter)
+        p @correct_letter.join("")
       else
-          puts "Please try again!"
+        p @correct_letter.join
       end
+  end
 
-    return @correct_letter.join ("")
+  def check_letter(letters, guess_letter)
+    letters.each_index do |idx|
+      if letters[idx] == guess_letter
+        @correct_letter[idx] = guess_letter
+      end
+    end
+    return @correct_letter
   end
 end
 
