@@ -61,18 +61,18 @@ class Guess_word
 end
 
 
+
 puts "User pleae enter your word here."
   word = gets.chomp
-game = Word_game.new(word)
+game = Guess_word.new(word)
 
 word.length.times do
     puts "Other user please guess your letter."
         letter = gets.chomp
         game.play_game(letter)
 end
-
 puts "You won in #{game.guess_count} guesses!"
 if game.guess_count==word.length
   puts "User enter word is #{game.word}."
-  puts "You win the game!"
+  puts "Congratulation! You win the game!"
 end
