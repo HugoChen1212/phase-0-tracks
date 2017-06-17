@@ -8,16 +8,25 @@
 # method to create play_game
   # input: letter
   # steps:
-    # IF letter include in the word
+    # IF letter include in the word and If the letter is not a repeated guessed
+    # counter up one
     # convert the string to list
-    # then iterate through the word
-      # IF split_word's letter == player's letter
-        # set into the list with the correct position and letter
+    # call check_letter method
     # print out the list with the guess right letter and convert to string
     # IF not include the letter
       # it will return a default setting of the array
     # return list and convert to string
   # output: string
+
+  #method to create check_letter
+    #imput: letters and guess_letter
+    #steps:
+    # then iterate through the letters
+    # IF letters contain player's letter
+        # set the player's letter into the list with the correct position
+    # IF letters not contain player's letter
+      # send a message to the user
+    # output: list or message
 
 
 class Word_game
