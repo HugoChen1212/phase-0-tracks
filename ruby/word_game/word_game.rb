@@ -31,8 +31,8 @@
 
 class Guess_word
     attr_reader :guess_count, :word, :correct_letter
-  def initialize (word)
-      @word =word
+  def initialize(word)
+      @word = word
       @guess_count = 0
       @user_guess = []
       @correct_letter = Array.new(word.length,"_")
