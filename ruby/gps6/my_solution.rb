@@ -5,18 +5,21 @@
 
 # EXPLANATION OF require_relative
 # require_relative: is like getting a local file, where require is getting code from some other source.
+
 # require: is like load fild from ruby folder like gem.
 
 require_relative 'state_data'
 
 class VirusPredictor
 
+# initialize the instance variable and attribute value
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+# call the other two private methods
   def virus_effects
     predicted_deaths
     speed_of_spread
@@ -24,6 +27,7 @@ class VirusPredictor
 
   private
 
+# create method that calculate and do the predicted of deaths and basedupon the population_density and population
   def predicted_deaths
     # predicted deaths is solely based on population density
      num = case @population_density
@@ -40,7 +44,7 @@ class VirusPredictor
 
 
 
-
+# calculate the speed of spread basedupon the population density and population
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
