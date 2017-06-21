@@ -30,7 +30,7 @@ class VirusPredictor
 # create method that calculate and do the predicted of deaths and basedupon the population_density and population
   def predicted_deaths
     # predicted deaths is solely based on population density
-     num = case @population_density
+     rate = case @population_density
     when(200..9999) then 0.4
     when(150..199) then 0.3
     when(100..149) then 0.2
@@ -38,7 +38,7 @@ class VirusPredictor
     else 0.05
     end
 
-    number_of_deaths = (@population * num).floor
+    number_of_deaths = (@population * rate).floor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
    end
 
@@ -90,5 +90,22 @@ STATE_DATA.each do |state,population_data|
    VirusPredictor.new(state, population_data[:population_density], population_data[:population]).virus_effects
 end
 
-#===========================================================
-# Reflection Section
+ #===========================================================
+ # Reflection Section
+ # Release 8:
+
+ # What are the differences between the two different hash syntaxes shown in the state_data file?
+ #  It use two different syntax to write this two hash, one is the old way (""=>""), but user friendly, which is easy to read. The other one is the symbol, which is more efficiency for programmer use.
+
+ # What does requre_relative do? How is it different from require?
+ #  require_relative: is like getting a local file, where require is getting code from some other source.
+ #  require: is like load fild from ruby folder like gem.
+
+ # What are some ways to iterate through a hash?
+ #  Some ways to iterate through a hash are use the method like: each_key, each, and each_value.
+
+ # What refactoring virus_effects, what stood out to you about the variables, if anything?
+ #  I never thought it can delete the the parameters and argument, and make the code very easy to read. I think refactoring is a very good skill, and I will try use it in the future.
+
+ # What concept did you most solidify in this challenge?
+ #  Except the concept of refactoring others are feeling solidify.
