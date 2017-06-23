@@ -39,9 +39,9 @@ console.log(Logest_Phrase(list));
 // output: Boolean
 
 function Key_Value_Match (object1, object2) {
-for (var k in object1){
+for (var key in object1){
   for (var i in object2){
-   if ( object1[k] == object2[i]){
+   if ( object1[key] == object2[i]){
      return true;
    }
 }
@@ -70,19 +70,19 @@ console.log(Key_Value_Match({animal: "Dogs", legs: 4}, {animal: "Dog", legs: 3})
 function Random_data (num, array) {
  var range_words = [];
 for (var i = 0; i < array.length; i++){
-  if (array[i].length >= 0 && array[i].length < 10){
+  if (array[i].length <= 10){
     range_words.push(array[i]);
   }
 }
  var output = [];
-for (var k = 0; k < num; k++){
+for (var n = 0; n < num; n++){
   var random_index  = Math.floor(Math.random() * range_words.length);
   output.push(range_words[random_index]);
 }
 return output;
 }
 
-example=["long ph","longest","car","apple","phrase","longer", "a", "dfkjdlfjaldfjldfj"];
+example=["long ph","longest","car","apple","phrase","longer", "a", "dfkjdlfjaldfjldfj", "dabkiejdis"];
 
 
 for (var n = 0; n < 10; n++){
