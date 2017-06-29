@@ -1,0 +1,5 @@
+select * from businesses, users, reviews where reviews.user_id = users.id and reviews.business_id = businesses.id;
+
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from businesses, users, reviews where reviews.user_id = users.id and reviews.business_id = businesses.id;
+
+select * from businesses, users, reviews where reviews.user_id = users.id and reviews.business_id = businesses.id and businesses.name = "Grundy Hollow Wedding Chapel";
