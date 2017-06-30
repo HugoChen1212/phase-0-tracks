@@ -1,0 +1,82 @@
+1. Display the information in one table (eighter table is fine).
+command: select * from student;
+
+output:
+1|Ryan|23|1
+2|Evan|22|2
+3|Ann|21|3
+
+2. Update an item that meets some condition.
+command: update student set age = 20 where name = "Evan";
+
+output:
+1|Ryan|23|1
+2|Evan|20|2
+3|Ann|21|3
+
+3. Display the information in both tables using one query.
+command:
+  select * from student, class where student.class_id = class.id;
+
+output:
+1|Ryan|23|1|1|Enlgish|true
+2|Evan|20|2|2|Math|true
+3|Ann|21|3|3|Piano|false
+
+4. Display a narrower selection of columns.
+command:
+  select student.name, student.age, class.name from student join class on student.class_id = class.id;
+
+output:
+Ryan|23|Enlgish
+Evan|20|Math
+Ann|21|Piano
+
+5. Delete an item that meets some condition.
+command: delete from student where name = "Ryan";
+
+output:
+2|Evan|20|2
+3|Ann|21|3
+
+Release 3
+Different kinds of joins:
+Add a element in student table for the coming example:
+command: insert into student (name, age, class_id) values ("Richard", 22, 5);
+
+output:
+2|Evan|20|2
+3|Ann|21|3
+4|Richard|22|5
+
+
+Inner Join
+command:
+select student.name, class.name from student inner join class on student.class_id = class.id;
+output:
+Evan|Math
+Ann|Piano
+
+command:
+select student.name, class.name from student inner join class on student.class_id = class.id where class.id = 2;
+Evan|Math
+
+Left Join
+command:
+select student.name, student.age, class.name from student left join class on student.class_id = class.id;
+output:
+Evan|20|Math
+Ann|21|Piano
+Richard|22|
+
+Right Join
+command:
+select student.name, student.age, class.name from student right join class on student.class_id = class.id;
+output:
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+Full Outer Join
+command:
+select student.name, student.age, class.name from student full outer join class on student.class_id = class.id;
+output:
+Error: RIGHT and FULL OUTER JOINs are not currently supported
