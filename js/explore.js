@@ -28,5 +28,6 @@ else
 }
 
 if (1==1){
+
   console.log("Yes the conditino is ture and the variable is reverse will be:" + reverse(word));
 }
