@@ -1,31 +1,27 @@
-var colors = ["blue", "green", "red", "black"];
-var names = ["Ed", "Dan", "Kevin", "jack"];
- colors.push("white");
- names.push("Seef");
+var colors = ['blue', 'pink', 'black', 'red'];
+var names = ['joe', 'bob', 'ryan', 'jack'];
+colors.push('green');
+names.push('evan');
 
- console.log(colors);
+console.log(colors);
 console.log(names);
 
- var house = {};
-for (var i = 0; i < names.length; i++){
-  house[names[i]]=colors[i];
+var horse = {};
+
+for(var i = 0; i < colors.length; i++) {
+  horse[names[i]] = colors[i];
 }
 
-console.log(house);
+console.log(horse);
 
-function Car (year,mark,model){
-  this.year = year;
-  this.mark = mark;
+function Car(make, model, year) {
+  this.make = make;
   this.model = model;
+  this.year = year;
 
-  this.hum = function() {
-    console.log("Hum!");
-  };
+  this.hum = function() {console.log('hum!'); };
 }
 
-var  sedan = new Car("2017","Toyota","Camry");
-var van = new Car("2017","Mercedes","Sprinter");
-console.log(sedan);
-sedan.hum();
-console.log(van);
-van.hum();
+var new_car = new Car('jeep', 'cherokee', 2005);
+console.log(new_car);
+new_car.hum();
