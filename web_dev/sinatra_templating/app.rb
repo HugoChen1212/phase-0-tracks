@@ -17,11 +17,50 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/students/about' do
+  @students = db.execute("SELECT * FROM students")
+  erb :about
+end
+
 # create new students via
 # a form
-post '/students' do
+get '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
 
+get '/students/form' do
+  erb :campuses
+end
+
+
+
+
+
+
+
+post '/about/table' do
+  p params
+  db.execute("insert into campuses (campus) values (?)",[params['campus']])
+   redirect '/students/campus'
+end
+
+
+get '/students/campus' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :new_campuses
+end
+
+
+
+=begin
+
+ "IF NOT EXISTS (INSERT INTO campuses (campus) values (?))CREATE TABLE campuses (id integer primary key, campus varchar(255))",[params['campus']])
+
+ create_table_compus = <<-SQL
+
+SQL
+
+
+=end
 # add static resources
