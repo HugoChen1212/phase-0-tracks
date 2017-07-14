@@ -14,4 +14,3 @@ Bark
 Jump
 Wagging the tail
 =end
-

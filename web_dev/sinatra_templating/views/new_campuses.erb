@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Campuses</title>
+</head>
+<body>
+<h1>DBC campuses</h1>
+<ul>
+    <% @campuses.each do |campus| %>
+      <li><%= campus['id'] %>, <%= campus['campus'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
